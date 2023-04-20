@@ -88,7 +88,7 @@ const Home = () => {
         <div className="product-list-section-container">
           <h1>List of Products</h1>
           <div className="product-list-card-container">
-            {filteredResult.length > 0 ? (
+            {filteredResult?.length > 0 ? (
               <>
                 {filteredResult?.map((product) => {
                   return (
