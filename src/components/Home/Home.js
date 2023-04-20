@@ -67,17 +67,17 @@ const Home = () => {
     if (opt === "") {
       setFilterResult([]);
     }
+    filterByCategory();
+
+    filterBySearchbar();
     if (products !== null) {
-      const counts = products.reduce((counts, product) => {
+      const counts = products?.reduce((counts, product) => {
         const cat = product.category;
         counts[cat] = (counts[cat] || 0) + 1;
         return counts;
       }, {});
       setTotal(counts);
     }
-    filterByCategory();
-
-    filterBySearchbar();
   }, [opt, search]);
 
   return (
