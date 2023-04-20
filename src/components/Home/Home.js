@@ -32,13 +32,13 @@ const Home = () => {
   const options = {};
   const filterByCategory = () => {
     try {
-      const filterByCategory = products.filter(
-        (product) => product.category === opt
-      );
-      if (opt === "") {
-        console.log("hello");
+      if (products !== null || products !== undefined) {
+        const filterByCategory = products.filter(
+          (product) => product.category === opt
+        );
+
+        setFilterResult(filterByCategory);
       }
-      setFilterResult(filterByCategory);
     } catch (err) {
       console.log(err);
     }
@@ -46,10 +46,12 @@ const Home = () => {
 
   const filterBySearchbar = () => {
     try {
-      const res = products.filter((item) =>
-        item.title.toLowerCase().includes(search.search.toLowerCase())
-      );
-      setFilterResult(res);
+      if (products !== null || products !== undefined) {
+        const res = products.filter((item) =>
+          item.title.toLowerCase().includes(search.search.toLowerCase())
+        );
+        setFilterResult(res);
+      }
     } catch (err) {
       console.log(err);
     }
