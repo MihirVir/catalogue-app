@@ -54,6 +54,7 @@ const Home = () => {
       console.log(err);
     }
   };
+  // read mode
   const handleReadMode = (idt) => {
     setId(idt);
     setIsReadMore((prev) => !prev);
@@ -66,7 +67,7 @@ const Home = () => {
     if (opt === "") {
       setFilterResult([]);
     }
-    if (products !== null || search !== null) {
+    if (products !== null) {
       const counts = products.reduce((counts, product) => {
         const cat = product.category;
         counts[cat] = (counts[cat] || 0) + 1;
