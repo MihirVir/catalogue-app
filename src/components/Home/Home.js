@@ -22,10 +22,10 @@ const Home = () => {
   const [total, setTotal] = useState({});
 
   const pieData = {
-    labels: total !== null && Object.keys(total).map((item) => item),
+    labels: total !== null && Object?.keys(total)?.map((item) => item),
     datasets: [
       {
-        data: Object.values(total).map((item) => item),
+        data: Object?.values(total)?.map((item) => item),
       },
     ],
   };
