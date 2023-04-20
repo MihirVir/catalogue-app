@@ -33,7 +33,7 @@ const Home = () => {
   const filterByCategory = () => {
     try {
       if (products !== null || products !== undefined) {
-        const filterByCategory = products.filter(
+        const filterByCategory = products?.filter(
           (product) => product.category === opt
         );
 
@@ -47,7 +47,7 @@ const Home = () => {
   const filterBySearchbar = () => {
     try {
       if (products !== null || products !== undefined) {
-        const res = products.filter((item) =>
+        const res = products?.filter((item) =>
           item.title.toLowerCase().includes(search.search.toLowerCase())
         );
         setFilterResult(res);
