@@ -100,6 +100,7 @@ const Home = () => {
                         <img
                           className="product-image"
                           src={`${product.image}`}
+                          loading="lazy"
                           alt=""
                         />
                         <p className="product-title">{product.title}</p>
