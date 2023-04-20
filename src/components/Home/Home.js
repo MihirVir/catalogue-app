@@ -22,7 +22,7 @@ const Home = () => {
   const [total, setTotal] = useState({});
 
   const pieData = {
-    labels: Object.keys(total).map((item) => item),
+    labels: total !== null && Object.keys(total).map((item) => item),
     datasets: [
       {
         data: Object.values(total).map((item) => item),
@@ -68,8 +68,8 @@ const Home = () => {
       setFilterResult([]);
     }
     filterByCategory();
-
     filterBySearchbar();
+
     if (products !== null) {
       const counts = products?.reduce((counts, product) => {
         const cat = product.category;
