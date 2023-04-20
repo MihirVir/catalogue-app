@@ -1,0 +1,97 @@
+.app-title {
+  font-weight: 900;
+  margin: 0;
+  font-size: 2rem;
+}
+main {
+  width: 100%;
+  height: 90vh;
+}
+.header {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+}
+.nav-bar {
+  width: 95%;
+  height: 10vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links {
+  width: 40%;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.nav-links li {
+  list-style: none;
+}
+.header-search-field {
+  padding: 0.5rem;
+  width: 250px;
+  border: 2px solid black;
+  border-radius: 2px;
+  font-weight: 800;
+  font-size: 1rem;
+}
+.header-search-field::placeholder {
+  color: black;
+}
+.header-search-field:focus::placeholder {
+  opacity: 0;
+}
+
+.selector {
+  width: 150px;
+  padding: 0.5rem;
+  border: 2px solid black;
+  font-weight: 800;
+  font-size: 1rem;
+}
+.menu-bar-open {
+  width: 14%;
+  border-radius: 5px;
+  height: 20%;
+  position: absolute;
+  right: 5%;
+  top: 9%;
+  background-color: black;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+.user-details {
+  width: 100%;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 1em;
+  align-items: flex-start;
+}
+.user-details-li {
+  padding: 0.5rem;
+  cursor: pointer;
+  color: white;
+  list-style: none;
+  width: 92%;
+  text-align: start;
+}
+.user-details-li:hover {
+  background-color: white;
+  color: black;
+}
+.menu-bar-open.active {
+  animation: scalingAnimation 100ms 1 ease;
+}
+@keyframes scalingAnimation {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
