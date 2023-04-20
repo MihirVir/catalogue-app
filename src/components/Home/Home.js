@@ -66,7 +66,7 @@ const Home = () => {
     if (opt === "") {
       setFilterResult([]);
     }
-    if (products !== null || products.length !== 0) {
+    if (products !== null || search !== null) {
       const counts = products.reduce((counts, product) => {
         const cat = product.category;
         counts[cat] = (counts[cat] || 0) + 1;
